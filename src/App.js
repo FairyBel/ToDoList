@@ -1,10 +1,12 @@
 import './App.css';
-import { Like } from './Like';
+import { List } from './List';
+
+
 
 function App() {
   return(
-    <div>
-      <Like />
+    <div className='app'>
+     <List />
     </div>
   ) 
   
