@@ -14,7 +14,7 @@ export class List extends Component{
 
     addItem(input){
         if (input === ''){
-            alert('Введите данные')
+            alert('Enter an item')
         } else{
         let arrList = this.state.userList;
         arrList.push(input);
@@ -43,10 +43,10 @@ export class List extends Component{
             <form onSubmit={this.onFormSubmit} className="container">
                 
                 <input type='text'
-                placeholder='Запишите свои планы...'
+                placeholder='Write your plan...'
                 onChange = {(e) => {this.onChangeEvent(e.target.value)}}
                 value={this.state.userInput} />
-                <button onClick={() => this.addItem(this.state.userInput)} className='btn btn-add'>Добавить</button>
+                <button onClick={() => this.addItem(this.state.userInput)} className='btn btn-add'>ADD</button>
                 <ul>
                 {this.state.userList.map((item, index)=>(
                     <li onClick={this.doneList} key={index}>
@@ -54,7 +54,7 @@ export class List extends Component{
                         {item}</li>
                     ))}
                 </ul>
-                <button onClick={() => this.deleteItem()} className='btn btn-del'>Удалить</button>
+                <button onClick={() => this.deleteItem()} className='btn btn-del'>Delete</button>
             </form>
         </div>  
         )
